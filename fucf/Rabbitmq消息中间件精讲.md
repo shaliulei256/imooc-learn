@@ -34,9 +34,9 @@
 - AMQP全称：Advanced Message Queuing Protocol
 - AMQP定义：是具有现代特征的==二进制协议==。是一个提供统一消息服务的应用层标准高级消息队列协议，是应用层协议的一个开放标准，为面向消息的中间件设计。
 #### AMQP协议模型
-![-w870](media/15592022416024.jpg)
+![-w870](https://it-learn-1259257911.cos.ap-beijing.myqcloud.com/2019/05/30/15592022416024.jpg)
 
-![-w544](media/15592022634877.jpg)
+![-w544](https://it-learn-1259257911.cos.ap-beijing.myqcloud.com/2019/05/30/15592022634877.jpg)
 
 
 ###  2-5 AMQP核心概念讲解
@@ -53,10 +53,10 @@
 
 ###  2-6 RabbitMQ整体架构与消息流转
 #### RabbitMQ整体架构
-![-w549](media/15592023006915.jpg)
+![-w549](https://it-learn-1259257911.cos.ap-beijing.myqcloud.com/2019/05/30/15592023006915.jpg)
 
 #### RabbitMQ消息流转
-![-w856](media/15592023150502.jpg)
+![-w856](https://it-learn-1259257911.cos.ap-beijing.myqcloud.com/2019/05/30/15592023150502.jpg)
 
 
 ###  2-7/8 RabbitMQ环境安装
@@ -65,7 +65,7 @@
  - 下载RabbitMQ必须安装包
  - 配置文件修改
 
-![-w848](media/15592023363129.jpg)
+![-w848](https://it-learn-1259257911.cos.ap-beijing.myqcloud.com/2019/05/30/15592023363129.jpg)
 
 
 ```
@@ -137,7 +137,7 @@ http://39.107.105.180:15672/#/
 ### 2-12~2-14 交换机详解
 
  Exchange:接收消息，并根据路由键转发消息到所绑定的队列
-![-w876](media/15592023852145.jpg)
+![-w876](https://it-learn-1259257911.cos.ap-beijing.myqcloud.com/2019/05/30/15592023852145.jpg)
 
 #### 交换机属性
 - Name：交换机名称
@@ -151,7 +151,7 @@ http://39.107.105.180:15672/#/
 - 所有发送到Direct Exchange的消息被转发到RouteKey中指定的Queue
 > 注意：Direct模式可以使用RabbitMQ自带的Exchange:default Exchange，所以不需要将Exchange进行任何绑定（binding）操作，消息传递时，RouteKey必须==完全匹配==才会被队列接收，否则该消息会被抛弃。    
 
-![-w446](media/15592024072991.jpg)
+![-w446](https://it-learn-1259257911.cos.ap-beijing.myqcloud.com/2019/05/30/15592024072991.jpg)
 
  Topic Exchange
 - 所有发送到Topic Exchange的消息被转发到所有关联RouteKey中指定Topic的Queue上
@@ -162,7 +162,7 @@ http://39.107.105.180:15672/#/
 例如： "log.#"能够匹配到"log.info.oa"  
  "log.*"只会匹配到"log.erro"  
 
-![-w555](media/15592024276525.jpg)
+![-w555](https://it-learn-1259257911.cos.ap-beijing.myqcloud.com/2019/05/30/15592024276525.jpg)
 
 
  Fanout Exchange
@@ -170,7 +170,7 @@ http://39.107.105.180:15672/#/
 - 发送到交换机的消息都会被转发到与该交换机绑定的所有队列上
 - Fanout交换机转发消息时最快的   
 
-![-w445](media/15592024426430.jpg)
+![-w445](https://it-learn-1259257911.cos.ap-beijing.myqcloud.com/2019/05/30/15592024426430.jpg)
 
 
 ### 2-15 绑定、队列、消息、虚拟主机详解
